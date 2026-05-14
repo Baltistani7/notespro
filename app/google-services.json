@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "269985515675",
+    "project_id": "note-pro-23f08",
+    "storage_bucket": "note-pro-23f08.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269985515675:android:3969a09553ac2adc815e3e",
+        "android_client_info": {
+          "package_name": "com.example.nootepro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQydQiLRVnLb3_EcH6Ajb_QV7PfHrXIi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269985515675:android:10fa0f08917b8c86815e3e",
+        "android_client_info": {
+          "package_name": "notepro.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQydQiLRVnLb3_EcH6Ajb_QV7PfHrXIi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
