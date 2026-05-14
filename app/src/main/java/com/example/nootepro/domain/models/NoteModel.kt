@@ -1,4 +1,4 @@
-package com.example.nootepro.domian.models
+package com.example.nootepro.domain.models
 data class NoteModel(
     val id: String = "",
     val title: String = "",

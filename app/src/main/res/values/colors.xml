@@ -3,4 +3,69 @@
     <color name="my_primary_color">#FF24D3FE</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Light -->
+    <color name="light_card_bg">#FFFFFF</color>
+    <color name="light_card_stroke">#E0E0E0</color>
+    <color name="light_accent">#378ADD</color>
+    <color name="light_title">#1A1A1A</color>
+    <color name="light_desc">#616161</color>
+    <color name="light_badge_bg">#E6F1FB</color>
+    <color name="light_badge_text">#0C447C</color>
+    <color name="light_divider">#EEEEEE</color>
+    <color name="light_meta">#9E9E9E</color>
+
+    <!-- Dark -->
+    <color name="dark_card_bg">#1E1E2E</color>
+    <color name="dark_card_stroke">#2E2E42</color>
+    <color name="dark_accent">#7F77DD</color>
+    <color name="dark_title">#E8E8F0</color>
+    <color name="dark_desc">#888899</color>
+    <color name="dark_badge_bg">#2A2840</color>
+    <color name="dark_badge_text">#AFA9EC</color>
+    <color name="dark_divider">#2E2E42</color>
+    <color name="dark_meta">#555566</color>
+
+    <!-- Warm Cream -->
+    <color name="cream_card_bg">#FDFAF5</color>
+    <color name="cream_card_stroke">#E8DFC8</color>
+    <color name="cream_accent">#BA7517</color>
+    <color name="cream_title">#2C1F0E</color>
+    <color name="cream_desc">#7A6145</color>
+    <color name="cream_badge_bg">#FAEEDA</color>
+    <color name="cream_badge_text">#633806</color>
+    <color name="cream_divider">#E8DFC8</color>
+    <color name="cream_meta">#B09070</color>
+
+    <!-- Forest Green -->
+    <color name="green_card_bg">#F4FAF0</color>
+    <color name="green_card_stroke">#C5DDB5</color>
+    <color name="green_accent">#3B6D11</color>
+    <color name="green_title">#1A2E10</color>
+    <color name="green_desc">#527040</color>
+    <color name="green_badge_bg">#EAF3DE</color>
+    <color name="green_badge_text">#27500A</color>
+    <color name="green_divider">#D0E8BE</color>
+    <color name="green_meta">#80A868</color>
+
+    <!-- AMOLED Black -->
+    <color name="amoled_card_bg">#000000</color>
+    <color name="amoled_card_stroke">#1A1A1A</color>
+    <color name="amoled_accent">#5DCAA5</color>
+    <color name="amoled_title">#F0F0F0</color>
+    <color name="amoled_desc">#666666</color>
+    <color name="amoled_badge_bg">#0A1F18</color>
+    <color name="amoled_badge_text">#5DCAA5</color>
+    <color name="amoled_divider">#1A1A1A</color>
+    <color name="amoled_meta">#444444</color>
+
+    <!-- Coral / Rose -->
+    <color name="coral_card_bg">#FFF8F6</color>
+    <color name="coral_card_stroke">#F5CFC4</color>
+    <color name="coral_accent">#D85A30</color>
+    <color name="coral_title">#2D1008</color>
+    <color name="coral_desc">#8A4030</color>
+    <color name="coral_badge_bg">#FAECE7</color>
+    <color name="coral_badge_text">#712B13</color>
+    <color name="coral_divider">#F5CFC4</color>
+    <color name="coral_meta">#C09080</color>
 </resources>

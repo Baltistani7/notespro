@@ -1,5 +1,5 @@
 package com.example.nootepro.domain.repository // Package sahi kar lein
-import com.example.nootepro.domian.models.NoteModel
+import com.example.nootepro.domain.models.NoteModel
 
 interface NoteRepository {
 
