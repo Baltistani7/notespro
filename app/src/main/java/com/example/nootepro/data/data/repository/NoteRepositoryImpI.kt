@@ -32,6 +32,7 @@ class NoteRepositoryImpl(
             Result.success(notes)
         } catch (e: Exception) {
             Result.failure(e)
+
         }
     }
 
