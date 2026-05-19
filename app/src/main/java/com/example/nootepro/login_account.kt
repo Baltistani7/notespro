@@ -6,12 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.nootepro.databinding.FragmentLoginAccountBinding // 1. Sahi Import
+import com.example.nootepro.presentation.CategoryListFragment
+import com.example.nootepro.databinding.FragmentLoginAccountBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginFragment : Fragment() {
 
-    private var _binding: FragmentLoginAccountBinding? = null // 2. Sahi Class Name
+    private var _binding: FragmentLoginAccountBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var auth: FirebaseAuth
@@ -61,6 +62,10 @@ class LoginFragment : Fragment() {
 
                 if (task.isSuccessful) {
                     Toast.makeText(requireContext(), "Success!", Toast.LENGTH_SHORT).show()
+                    // CategoryListFragment par navigate karein
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, CategoryListFragment())
+                        .commit()
                 } else {
                     Toast.makeText(requireContext(), "Error: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }

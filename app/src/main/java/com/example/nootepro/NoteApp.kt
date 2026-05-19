@@ -1,6 +1,7 @@
 package com.example.nootepro
 
 import android.app.Application
+import com.example.nootepro.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -11,8 +12,8 @@ class NoteApp : Application() {
         startKoin {
             // Android ko batate hain ke context yehi app hai
             androidContext(this@NoteApp)
-            // Abhi modules khali hain, baad mein yahan dalenge
-            modules(listOf())
+            // AppModule ko load kiya
+            modules(appModule)
         }
     }
 }

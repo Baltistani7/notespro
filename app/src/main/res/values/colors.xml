@@ -68,4 +68,8 @@
     <color name="coral_badge_text">#712B13</color>
     <color name="coral_divider">#F5CFC4</color>
     <color name="coral_meta">#C09080</color>
+    <!-- In lines ko colors.xml mein niche add kar den -->
+    <color name="accent_blue">#378ADD</color>
+    <color name="badge_text">#0C447C</color>
+    <color name="badge_bg">#E6F1FB</color>
 </resources>

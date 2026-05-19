@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.nootepro.databinding.FragmentCreatAccountBinding
+import com.example.nootepro.presentation.viewmodels.NotesFragment
 import com.google.firebase.auth.FirebaseAuth
 
 // 1. AppCompatActivity ki jagah Fragment() use kiya
@@ -35,6 +36,12 @@ class CreateAccountFragment : Fragment() {
         binding.btnSignUp.setOnClickListener {
             performSignUp()
         }
+
+        binding.tvLogin.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, LoginFragment())
+                .commit()
+        }
     }
 
     private fun performSignUp() {
@@ -42,22 +49,42 @@ class CreateAccountFragment : Fragment() {
         val password = binding.etPassword.text.toString().trim()
         val confirmPassword = binding.etConfirmPassword.text.toString().trim()
 
-        // Validations
+        // --- Professional Validations ---
+
+        // 1. Email Validation (Empty check + Format check)
         if (email.isEmpty()) {
-            binding.etEmail.error = "Email likhna zaroori hai"
+            binding.etEmail.error = "Email is required"
+            binding.etEmail.requestFocus()
+            return
+        } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            binding.etEmail.error = "Please enter a valid email address"
             binding.etEmail.requestFocus()
             return
         }
-        if (password.isEmpty() || password.length < 6) {
-            binding.etPassword.error = "Password kam az kam 6 characters ka hona chahiye"
+
+        // 2. Password Validation (Length check)
+        if (password.isEmpty()) {
+            binding.etPassword.error = "Password is required"
+            binding.etPassword.requestFocus()
+            return
+        } else if (password.length < 6) {
+            binding.etPassword.error = "Password must be at least 6 characters"
             binding.etPassword.requestFocus()
             return
         }
-        if (password != confirmPassword) {
-            binding.etConfirmPassword.error = "Passwords match nahi ho rahe"
+
+        // 3. Confirm Password Validation (Match check)
+        if (confirmPassword.isEmpty()) {
+            binding.etConfirmPassword.error = "Please confirm your password"
+            binding.etConfirmPassword.requestFocus()
+            return
+        } else if (password != confirmPassword) {
+            binding.etConfirmPassword.error = "Passwords do not match"
             binding.etConfirmPassword.requestFocus()
             return
         }
+
+        // Baki ka Firebase logic yahan se shuru hoga...
 
         // Loading Start
         binding.signUpProgress.visibility = View.VISIBLE
@@ -74,7 +101,10 @@ class CreateAccountFragment : Fragment() {
                     // Fragment mein 'this' ki jagah 'requireContext()' ya 'context' use hota hai
                     Toast.makeText(requireContext(), "Account Created Successfully!", Toast.LENGTH_SHORT).show()
 
-                    // TODO: Next screen par jane ka code yahan aayega
+                    // Home screen (NotesFragment) par navigate karein
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, NotesFragment())
+                        .commit()
                 } else {
                     Toast.makeText(requireContext(), "Error: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                 }
