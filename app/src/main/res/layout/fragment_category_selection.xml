@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <!-- 1. Header Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Category"
+        android:textSize="26sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a name and select a theme"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- 2. Category Name Input -->
+    <EditText
+        android:id="@+id/etCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="e.g. Work, Shopping, Personal"
+        android:paddingLeft="15dp"
+        android:inputType="textCapWords"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- 3. Color Selection Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Theme Color"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <!-- 4. Color Dots -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+        <View
+            android:id="@+id/colorBlue"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_blue_light" />
+
+        <View
+            android:id="@+id/colorRed"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_red_light" />
+
+        <View
+            android:id="@+id/colorGreen"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_green_light" />
+
+        <View
+            android:id="@+id/colorOrange"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_orange_light" />
+    </LinearLayout>
+
+    <!-- 5. Proceed Button -->
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Create &amp; Continue"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:backgroundTint="@android:color/black"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>
