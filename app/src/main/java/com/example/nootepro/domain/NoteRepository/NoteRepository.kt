@@ -12,4 +12,6 @@ interface NoteRepository {
     // Category Methods
     suspend fun addCategory(category: CategoryModel): Result<Unit>
     suspend fun getCategories(): Result<List<CategoryModel>>
-    suspend fun deleteCategory(categoryName: String): Result<Boolean>}
+    suspend fun deleteCategory(categoryName: String): Result<Boolean>
+    suspend fun renameCategory(oldName: String, newName: String): Result<Boolean>
+    suspend fun renameNote(category: String, oldTitle: String, newTitle: String, note: NoteModel): Result<Boolean>}
